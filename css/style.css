@@ -1,0 +1,101 @@
+/* Start-Global-Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    Font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0, 0%, 95%);
+    min-height: 100vh;
+    padding: 0 15px;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Verydark-cyan: hsl(179, 100%, 13%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* End-Global-Rules */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: aqua;
+    max-width: 700px;
+    box-shadow: 0 1px 20px rgb(86, 85, 85);
+}
+
+@media(max-width:767px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+main article {
+    background-color: var(--Bright-orange);
+    flex-basis: calc(100% / 3);
+    padding: 2rem;
+    max-width: 100%;
+}
+
+article img {
+    width: 60px;
+}
+
+article h1 {
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+article p {
+    color: var(--paragraph);
+    padding-bottom: 50px;
+    line-height: 1.5;
+}
+
+article a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 2px solid var(--paragraph);
+    border-radius: 25px;
+    color: var(--very-light-gray);
+    transition: 0.3s;
+}
+
+article:nth-of-type(1) a:hover {
+    background-color: var(--very-light-gray);
+    color: var(--Bright-orange);
+}
+
+article:nth-of-type(2) a:hover {
+    background-color: var(--very-light-gray);
+    color: var(--Dark-cyan);
+}
+
+article:nth-of-type(3) a:hover {
+    background-color: var(--very-light-gray);
+    color: var(--Verydark-cyan);
+}
+
+main article:nth-of-type(2) {
+    background-color: var(--Dark-cyan);
+}
+
+main article:nth-of-type(3) {
+    background-color: var(--Verydark-cyan);
+}
