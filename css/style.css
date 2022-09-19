@@ -47,7 +47,12 @@ main article {
     background-color: var(--Bright-orange);
     flex-basis: calc(100% / 3);
     padding: 2rem;
-    max-width: 100%;
+}
+
+@media(max-width:767px) {
+    main article {
+        max-width: 100%;
+    }
 }
 
 article img {
